@@ -5,6 +5,7 @@ import FourthSection from './Components/FourthSection'
 import FifthSection from './Components/FifthSection'
 import SixthSection from './Components/SixthSection'
 import SeventhSection from './Components/SeventhSection'
+import EightSection from './Components/EightSection'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <FifthSection/>
       <SixthSection/>
       <SeventhSection/>
+      <EightSection/>
     </div>
   )
 }

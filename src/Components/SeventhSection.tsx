@@ -3,6 +3,8 @@ import SevenSectionImage2 from "../assets/SevenSectionImage2.png";
 import SevenSectionImage3 from "../assets/SevenSectionImage3.png";
 import SevenSectionImage4 from "../assets/SevenSectionImage4.png";
 import tick from "../assets/tick.png";
+
+
 const data = [
   {
     id: 1,
@@ -53,10 +55,13 @@ const data = [
 const SeventhSection = () => {
   return (
     <div className="px-24 bg-[#D9D9D9]/20 pt-20">
+        {/* -----------------------Heading Section------------------------------- */}
       <h1 className="text-[#515577] text-6xl text-center leading-16 letterSpacing-[-2px]">
         If One Al Agent Makes A Difference,
         <span className="block">Imagine A Whole Team!</span>
       </h1>
+
+      {/* ----------------------- Cards Section------------------------------- */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 mb-24 ">
         {data.map((items) => (
           <div
@@ -83,6 +88,8 @@ const SeventhSection = () => {
         ))}
       </div>
 
+
+        {/* ----------------------- Button Section------------------------------- */}
       <div className="flex flex-col items-center justify-center text-center  mt-10 pb-10">
         <h1 className="text-5xl text-[#504D59]">Start Now And See Immediate Results!</h1>
        <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-xl text-white mt-5 px-20 py-5 tracking[-3px] rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
