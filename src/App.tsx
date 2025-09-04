@@ -4,6 +4,7 @@ import Third from './Components/Third'
 import FourthSection from './Components/FourthSection'
 import FifthSection from './Components/FifthSection'
 import SixthSection from './Components/SixthSection'
+import SeventhSection from './Components/SeventhSection'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <FourthSection/>
       <FifthSection/>
       <SixthSection/>
+      <SeventhSection/>
     </div>
   )
 }

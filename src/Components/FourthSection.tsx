@@ -2,6 +2,8 @@ import FourthSectionBG from "../Assets/FourthSectionBG.png";
 import FourthSectionBG2 from "../assets/FourthSectionBG2.png";
 import { Check } from "lucide-react";
 import FourthSectionMid from "../Assets/FourthSectionMid.png";
+
+
 const items = [
   "Beauty clinics struggling with turnover and lack of commitment at the position",
   "Clinics who want to scale their sales without increasing effort",
@@ -12,6 +14,8 @@ const items2 = [
   "Less Appointment No-Shows",
   "Zero stress with disengaged staff",
 ];
+
+
 const FourthSection = () => {
   return (
     <div className="px-22 pt-20 bg-[#D9D9D9]/20">
