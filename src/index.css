@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Font Faces */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./SofiaFont/Sofia Pro Regular Az.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./SofiaFont/Sofia Pro Medium Az.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./SofiaFont/Sofia Pro Semi Bold Az.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./SofiaFont/Sofia Pro Bold Az.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./SofiaFont/Sofia Pro Black Az.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Apply globally */
+body {
+  font-family: 'Sofia Pro', sans-serif;
+}
+.card-shape {
+  clip-path: path(
+    "M 0 40 Q 100 0 180 0 Q 250 0 300 20 Q 320 40 320 80 L 320 600 Q 320 640 280 660 Q 160 700 0 680 Z"
+  );
+  border-radius: 24px;
+  overflow: hidden;
+}
