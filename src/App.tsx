@@ -6,7 +6,7 @@ import FifthSection from './Components/FifthSection'
 import SixthSection from './Components/SixthSection'
 import SeventhSection from './Components/SeventhSection'
 import EightSection from './Components/EightSection'
-
+import NinthSection from './Components/NineSection'
 const App = () => {
   return (
     <div className=''>
@@ -18,6 +18,7 @@ const App = () => {
       <SixthSection/>
       <SeventhSection/>
       <EightSection/>
+      <NinthSection/>
     </div>
   )
 }

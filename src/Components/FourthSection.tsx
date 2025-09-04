@@ -1,7 +1,7 @@
-import FourthSectionBG from "../Assets/FourthSectionBG.png";
+import FourthSectionBG from "../assets/FourthSectionBG.png";
 import FourthSectionBG2 from "../assets/FourthSectionBG2.png";
 import { Check } from "lucide-react";
-import FourthSectionMid from "../Assets/FourthSectionMid.png";
+import FourthSectionMid from "../assets/FourthSectionMid.png";
 
 
 const items = [
