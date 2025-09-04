@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Users from "../assets/Users.png";
-import background from "../assets/background.png";
+import background from "../assets/Background.png";
 import employee from "../assets/employee.png";
 import landingLast from "../assets/landingLast.png";
 import arrow1 from "../assets/arrow1.png";
