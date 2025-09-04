@@ -1,4 +1,3 @@
-import React from 'react'
 import AiAssistantphone from "../assets/AiAssistantphone.png";
 
 

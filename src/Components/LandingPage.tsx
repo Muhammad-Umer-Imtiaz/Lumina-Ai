@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./Navbar";
 import Users from "../assets/Users.png";
 import background from "../assets/background.png";

@@ -1,4 +1,3 @@
-import React from "react";
 import FourthSectionBG from "../Assets/FourthSectionBG.png";
 import FourthSectionBG2 from "../assets/FourthSectionBG2.png";
 import { Check } from "lucide-react";
@@ -15,11 +14,12 @@ const items2 = [
 ];
 const FourthSection = () => {
   return (
-    <div className="px-22 pt-20 bg-[#D9D9D9]/40">
+    <div className="px-22 pt-20 bg-[#D9D9D9]/20">
       <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-[#10174F]  to-[#777796] text-6xl text-center">
         Stop Losing Patients And Money{" "}
         <span className="block bg-clip-text text-transparent bg-gradient-to-l from-[#10174F] to-[#777796]">
-Due To Service Failures!        </span>
+          Due To Service Failures!{" "}
+        </span>
       </h1>
       <div className="flex flex-col md:flex-row items-center justify-between  mt-10">
         {/*--------------------- First Section ---------------------*/}
@@ -95,6 +95,14 @@ Due To Service Failures!        </span>
             </div>
           </div>
         </div>
+      </div>
+      <div className="text-center mt-16 pb-10">
+        <h1 className="bg-clip-text text-transparent  bg-gradient-to-r from-[#10174F]  to-[#777796] text-3xl text-center">
+          Want To See How It Works In Practice?{" "}
+        </h1>
+        <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-lg text-white mt-5 px-14 py-4 tracking[-3px] rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
+          Schedule Your Demo{" "}
+        </button>
       </div>
     </div>
   );
