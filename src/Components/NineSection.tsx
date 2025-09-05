@@ -19,9 +19,13 @@ const data = [
 export default function ConnectSection() {
   const [index, setIndex] = useState(0);
 
-  const nextSlide = () =>
-    setIndex((prev) => Math.min(prev + 1, data.length - 1));
-  const prevSlide = () => setIndex((prev) => Math.max(prev - 1, 0));
+  const nextSlide = () => {
+    setIndex((prev) => (prev + 1) % data.length); // Loop back to 0 after last item
+  };
+
+  const prevSlide = () => {
+    setIndex((prev) => (prev - 1 + data.length) % data.length); // Loop to last item when going before first
+  };
 
   return (
     <div className="bg-[#5859B0] pl-24 py-28 flex items-center">
@@ -37,8 +41,9 @@ export default function ConnectSection() {
           {/* Cards Row */}
           <motion.div
             className="flex gap-6"
-            animate={{ x: `-${index * 53}%` }}
-            // 50% card width + ~3% gap = ~53%
+            animate={{ 
+              x: `-${index * 53}%` // Simple calculation based on current index
+            }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
           >
             {data.map((item) => (
@@ -74,8 +79,7 @@ export default function ConnectSection() {
           {/* Previous Button */}
           <button
             onClick={prevSlide}
-            disabled={index === 0}
-            className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white hover:bg-white/20 transition-colors text-2xl disabled:opacity-40 bg-[#5859B0]"
+            className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white hover:bg-white/20 transition-colors text-2xl bg-[#5859B0]"
           >
             ←
           </button>
@@ -96,8 +100,7 @@ export default function ConnectSection() {
           {/* Next Button */}
           <button
             onClick={nextSlide}
-            disabled={index === data.length - 1}
-            className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white hover:bg-white/20 transition-colors text-2xl disabled:opacity-40 bg-[#5859B0]"
+            className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white hover:bg-white/20 transition-colors text-2xl bg-[#5859B0]"
           >
             →
           </button>

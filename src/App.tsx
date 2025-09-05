@@ -10,6 +10,7 @@ import NinthSection from './Components/NineSection'
 import TenthSection from './Components/TenthSection'
 import ElevenSection from './Components/ElevenSection'
 import TwelveSection from './Components/TwelveSection'
+import ThirteenSection from './Components/ThirteenSection'
 const App = () => {
   return (
     <div className=''>
@@ -25,6 +26,7 @@ const App = () => {
       <TenthSection/>
       <ElevenSection/>
       <TwelveSection/>
+      <ThirteenSection/>
     </div>
   )
 }

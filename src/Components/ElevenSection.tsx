@@ -5,6 +5,7 @@ import ElevenVector4 from "../assets/ElevenVector4.png"
 import ElevenVector5 from "../assets/ElevenVector5.png"
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { wrap } from "framer-motion" // ✅ helps loop index
 
 const ElevenSection = () => {
   const data = [
@@ -42,8 +43,11 @@ const ElevenSection = () => {
 
   const [index, setIndex] = useState(0)
 
-  const nextSlide = () => setIndex((prev) => Math.min(prev + 1, data.length - 1))
-  const prevSlide = () => setIndex((prev) => Math.max(prev - 1, 0))
+  // ✅ Looping index with wrap
+  const wrappedIndex = wrap(0, data.length, index)
+
+  const nextSlide = () => setIndex((prev) => prev + 1)
+  const prevSlide = () => setIndex((prev) => prev - 1)
 
   return (
     <div className="bg-[#4E5CB9] py-20 overflow-hidden">
@@ -59,7 +63,7 @@ const ElevenSection = () => {
         <div className="">
           <motion.div
             className="flex gap-8"
-            animate={{ x: `-${index * 53}%` }} // 50% width + gap
+            animate={{ x: `-${wrappedIndex * 53}%` }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
           >
             {data.map((item) => (
@@ -77,7 +81,7 @@ const ElevenSection = () => {
                 </div>
 
                 {/* Content */}
-                <h2 className="text-[#4F4F5B] text-3xl  mb-4 mt-16">
+                <h2 className="text-[#4F4F5B] text-3xl mb-4 mt-16">
                   {item.heading}
                 </h2>
                 <p className="text-[#67676C] text-base">{item.para}</p>
@@ -91,8 +95,7 @@ const ElevenSection = () => {
           {/* Previous */}
           <button
             onClick={prevSlide}
-            disabled={index === 0}
-            className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white hover:bg-white/20 transition-colors text-2xl disabled:opacity-40 bg-[#4E5CB9]"
+            className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white hover:bg-white/20 transition-colors text-2xl bg-[#4E5CB9]"
           >
             ←
           </button>
@@ -104,7 +107,9 @@ const ElevenSection = () => {
                 key={i}
                 onClick={() => setIndex(i)}
                 className={`w-4 h-4 rounded-full transition-colors ${
-                  i === index ? "bg-white" : "bg-white/40 hover:bg-white/60"
+                  i === wrappedIndex
+                    ? "bg-white"
+                    : "bg-white/40 hover:bg-white/60"
                 }`}
               />
             ))}
@@ -113,8 +118,7 @@ const ElevenSection = () => {
           {/* Next */}
           <button
             onClick={nextSlide}
-            disabled={index === data.length - 1}
-            className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white hover:bg-white/20 transition-colors text-2xl disabled:opacity-40 bg-[#4E5CB9]"
+            className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white hover:bg-white/20 transition-colors text-2xl bg-[#4E5CB9]"
           >
             →
           </button>

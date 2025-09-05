@@ -52,41 +52,30 @@ const LandingPage = () => {
 
         <div className="relative flex items-center justify-center ">
           {/* Assistant (AI face) with bottom blur */}
-          <div className="relative">
+          <div className="relative -top-8 right-4">
             {/* Assistant image */}
-            <img src={Assistant} alt="" className="w-[360px] md:w-[460px]" />
-
-            {/* Bottom overlay for blur + gradient */}
-            <div
-              className="absolute bottom-0 left-0 right-0 h-2/5"
-              style={{
-                background:
-                  "linear-gradient(to top, rgba(231,233,242,1), rgba(254,254,254,0.7), rgba(231,233,242,0))",
-                backdropFilter: "blur(0px)",
-                WebkitBackdropFilter: "blur(0px)",
-              }}
-            />
-          </div>
+            <img src={Assistant} alt="" className="w-[360px] md:w-[550px] " />
 
           {/* Left arrow */}
           <img
             src={arrow1}
             alt="arrow1"
-            className="absolute left-[-130px] top-14 h-24"
+            className="absolute left-[-150px] top-25 h-20"
           />
 
           {/* Right arrow */}
           <img
             src={arrow2}
             alt="arrow2"
-            className="absolute right-[-80px] bottom-20 h-40"
+            className="absolute right-[-10px] bottom-30 h-40"
           />
         </div>
 
         {/* ---------------------- RIGHT SIDE (service card)----------------------- */}
         
-        <img src={landingLast} width={300} className="pt-20" alt="" />
+        <img src={landingLast} width={310} height={400} className="rounded-4xl" alt="" />
       </div>
+    </div>
     </div>
   );
 };

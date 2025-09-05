@@ -18,7 +18,7 @@ const items2 = [
 
 const FourthSection = () => {
   return (
-    <div className="px-22 pt-20 bg-[#D9D9D9]/20">
+    <div className="px-22 pt-20 bg-[#D9D9D9]/40">
       <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-[#10174F]  to-[#777796] text-6xl text-center">
         Stop Losing Patients And Money{" "}
         <span className="block bg-clip-text text-transparent bg-gradient-to-l from-[#10174F] to-[#777796]">

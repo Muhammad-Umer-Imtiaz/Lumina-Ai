@@ -4,11 +4,11 @@ import AiAssistantphone from "../assets/AiAssistantphone.png";
 const Third = () => {
   return (
 <>
-<div className="grid grid-cols-2  gap-16 pt-24 bg-[#D9D9D9]/40">
-        <div className="bg-white flex flex-col pl-24 rounded-r-4xl justify-center">
-          <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-[#10174F]  to-[#777796] text-6xl">
+<div className="grid grid-cols-2   pt-24  bg-[#D9D9D9]/40">
+        <div className="bg-white flex flex-col pl-20 rounded-r-4xl justify-center pr-16">
+          <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-[#10174F]  to-[#777796] text-5xl">
             Automate Your Clinic
-            <span className="block bg-clip-text text-transparent bg-gradient-to-l from-[#10174F] to-[#777796]">
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[#10174F] to-[#777796]">
               Simply And Efficiently
             </span>
           </h1>
@@ -22,8 +22,8 @@ const Third = () => {
             enhances patient satisfaction and drives higher conversion rates.
           </p>
         </div>
-        <div>
-          <img src={AiAssistantphone} alt="AiAssistantphone" />
+        <div className="pl-28">
+          <img src={AiAssistantphone} alt="AiAssistantphone" width={620}/>
         </div>
       </div>  
       </>  )
