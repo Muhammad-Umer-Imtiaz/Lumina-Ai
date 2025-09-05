@@ -7,6 +7,7 @@ import SixthSection from './Components/SixthSection'
 import SeventhSection from './Components/SeventhSection'
 import EightSection from './Components/EightSection'
 import NinthSection from './Components/NineSection'
+import TenthSection from './Components/TenthSection'
 const App = () => {
   return (
     <div className=''>
@@ -19,6 +20,7 @@ const App = () => {
       <SeventhSection/>
       <EightSection/>
       <NinthSection/>
+      <TenthSection/>
     </div>
   )
 }

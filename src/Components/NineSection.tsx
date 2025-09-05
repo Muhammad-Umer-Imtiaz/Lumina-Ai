@@ -1,6 +1,6 @@
 import whatsapp from "../assets/whatsapp.png";
 import insta from "../assets/insta.png";
-import group from "../assets/group.png";
+import group from "../assets/Group.png";
 import Link from "../assets/Link.png";
 import { motion } from "framer-motion";
 import { useState } from "react";

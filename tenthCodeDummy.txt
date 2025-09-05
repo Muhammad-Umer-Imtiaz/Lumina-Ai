@@ -1,0 +1,44 @@
+<div className="flex flex-col items-center py-16 px-6 max-w-2xl mx-auto">
+      {/* Heading */}
+      <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12 text-gray-800">
+        Your First AI Employee, No Coding Required!
+      </h2>
+
+      {/* Timeline */}
+      <div className="relative w-full">
+        {/* Dotted Vertical Line */}
+        <div className="absolute left-6 top-0 h-full w-0.5 border-l-2 border-dotted border-gray-300"></div>
+
+        <div className="space-y-12">
+          {steps.map((step, i) => (
+            <div key={i} className="relative flex items-start">
+              {/* Dot */}
+              <div
+                className={`w-6 h-6 rounded-full flex items-center justify-center z-10 ${
+                  i === 0
+                    ? "bg-gradient-to-r from-purple-500 to-indigo-400 text-white text-xs font-medium"
+                    : "bg-gray-500"
+                }`}
+              >
+                {i === 0 ? "Step" : ""}
+              </div>
+
+              {/* Card */}
+              <div className="ml-8 bg-purple-50 rounded-2xl shadow-sm p-6">
+                <h3 className="text-lg font-semibold text-purple-700">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600 mt-2">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="mt-16">
+        <button className="px-6 py-3 rounded-full bg-purple-600 text-white font-medium hover:bg-purple-700 transition">
+          Schedule A Demo
+        </button>
+      </div>
+    </div>
