@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import Girlimage1 from "../assets/Girlimage1.jpg";
-import Girlimage2 from "../assets/Girlimage2.jpg";
-import Girlimage3 from "../assets/Girlimage3.jpg";
-import Girlimage4 from "../assets/Girlimage4.png";
-import Girlimage5 from "../assets/Girlimage5.png";
-import Girlimage6 from "../assets/Girlimage6.jpg";
-import Girlimage7 from "../assets/Girlimage7.png";
+import Girlimage1 from "../assets/GirlImage1.png";
+import Girlimage2 from "../assets/GirlImage2.png";
+import Girlimage3 from "../assets/GirlImage3.png";
+import Girlimage4 from "../assets/GirlImage4.png";
+import Girlimage5 from "../assets/GirlImage5.png";
+import Girlimage6 from "../assets/GirlImage6.png";
+import Girlimage7 from "../assets/GirlImage7.png";
 
 
 const TwelveSection = () => {
@@ -18,7 +18,7 @@ const TwelveSection = () => {
   };
 
   const data = [
-    { id: 1, image: Girlimage1, ...commonData },
+     { id: 1, image: Girlimage1, ...commonData },
     { id: 2, image: Girlimage2, ...commonData },
     { id: 3, image: Girlimage3, ...commonData },
     { id: 4, image: Girlimage4, ...commonData },
@@ -59,7 +59,7 @@ const TwelveSection = () => {
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-20 h-20 rounded-full object-top"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <p className="text-[#67676C] text-lg leading-relaxed">

@@ -1,5 +1,5 @@
-import { useState, type SetStateAction } from "react";
-import { Plus } from "lucide-react"; 
+import { useState } from "react";
+import { Plus } from "lucide-react";
 import Lastimageof from "../assets/Lastimageof.png";
 
 const ThirteenSection = () => {
@@ -33,8 +33,8 @@ const ThirteenSection = () => {
     },
   ];
 
-  const toggleFAQ = (index: SetStateAction<number | null>) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggleFAQ = (idx: number) => {
+    setOpenIndex(openIndex === idx ? null : idx);
   };
 
   return (
@@ -44,13 +44,18 @@ const ThirteenSection = () => {
         Still Have Doubts?
         <span className="block">Frequently Asked Questions</span>
       </h1>
+
       {/*-------------------- FAQS Section------------------------------- */}
-      <div className="flex gap-6">
+      <div className="flex gap-6 items-start">
         {/* ------------------- Left Section ------------------------------*/}
-        <img src={Lastimageof} alt="Robot Image" width={520} />
+        <img
+          src={Lastimageof}
+          alt="Robot Image"
+          className="w-[570px] flex-shrink-0 object-contain"
+        />
 
         {/*------------------- Right Section FAQS --------------------------*/}
-        <div className="space-y-4 max-w-3xl w-full">
+        <div className="space-y-4 max-w-3xl flex-1 min-w-0">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -60,11 +65,12 @@ const ThirteenSection = () => {
               <div className="flex justify-between items-center">
                 <h2 className="text-[#67676C] text-2xl ">{faq.question}</h2>
                 <Plus
-                  className={`w-10 h-10 text-[#6C6CEC] font-black transition-transform duration-300 ${
+                  className={`w-10 h-10 text-[#6C6CEC] font-black transform transition-transform duration-300 ${
                     openIndex === index ? "rotate-45" : ""
                   }`}
                 />
               </div>
+
               {openIndex === index && (
                 <p className="mt-3 text-gray-500">{faq.answer}</p>
               )}
