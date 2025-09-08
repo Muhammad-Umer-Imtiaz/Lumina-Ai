@@ -60,7 +60,7 @@ const LandingPage = () => {
           <img
             src={arrow1}
             alt="arrow1"
-            className="absolute left-[-150px] top-25 h-20"
+            className="absolute left-[-150px] top-37 h-20"
           />
 
           {/* Right arrow */}
