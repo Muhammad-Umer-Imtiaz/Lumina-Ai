@@ -3,9 +3,9 @@ import Girlimage1 from "../assets/GirlImage1.png";
 import Girlimage2 from "../assets/GirlImage2.png";
 import Girlimage3 from "../assets/GirlImage3.png";
 import Girlimage4 from "../assets/GirlImage41.png";
-import Girlimage5 from "../assets/GirlImage5.png";
-import Girlimage6 from "../assets/GirlImage6.png";
-import Girlimage7 from "../assets/GirlImage7.png";
+import Girlimage5 from "../assets/GirlImage51.png";
+import Girlimage6 from "../assets/GirlImage61.png";
+import Girlimage7 from "../assets/GirlImage71.png";
 
 const TwelveSection = () => {
   const commonData = {
