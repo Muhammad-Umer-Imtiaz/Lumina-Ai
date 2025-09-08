@@ -7,6 +7,7 @@ import Girlimage5 from "../assets/Girlimage5.png";
 import Girlimage6 from "../assets/Girlimage6.jpg";
 import Girlimage7 from "../assets/Girlimage7.png";
 
+
 const TwelveSection = () => {
   const commonData = {
     paragraph:

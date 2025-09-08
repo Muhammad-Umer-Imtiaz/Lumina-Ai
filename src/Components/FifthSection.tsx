@@ -124,7 +124,7 @@ const FifthSection = () => {
             <img
               src={specialImg}
               alt="special"
-              className="w-[400px] absolute top-[-12] right-0 h-auto"
+              className="w-[400px] absolute  right-0 h-auto"
             />
           </div>
         </div>
