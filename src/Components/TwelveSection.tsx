@@ -188,5 +188,3 @@ const TwelveSection = () => {
 };
 
 export default TwelveSection;
-
-
