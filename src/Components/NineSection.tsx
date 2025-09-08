@@ -4,6 +4,8 @@ import group from "../assets/Group.png";
 import Link from "../assets/Link.png";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { wrap } from "framer-motion" // ✅ helps loop index
+
 
 const data = [
   { id: 1, image: whatsapp, heading: "WhatsApp  & WhatsApp Business" },
@@ -18,6 +20,8 @@ const data = [
 
 export default function ConnectSection() {
   const [index, setIndex] = useState(0);
+    const wrappedIndex = wrap(0, data.length, index)
+
 
   const nextSlide = () => {
     setIndex((prev) => (prev + 1) % data.length); // Loop back to 0 after last item
@@ -41,9 +45,8 @@ export default function ConnectSection() {
           {/* Cards Row */}
           <motion.div
             className="flex gap-6"
-            animate={{ 
-              x: `-${index * 53}%` // Simple calculation based on current index
-            }}
+                        animate={{ x: `-${wrappedIndex * 15}%` }}
+
             transition={{ duration: 0.7, ease: "easeInOut" }}
           >
             {data.map((item) => (
@@ -91,7 +94,7 @@ export default function ConnectSection() {
                 key={i}
                 onClick={() => setIndex(i)}
                 className={`w-4 h-4 rounded-full transition-colors ${
-                  i === index ? "bg-white" : "bg-white/40 hover:bg-white/60"
+                  i === wrappedIndex ? "bg-white" : "bg-white/40 hover:bg-white/60"
                 }`}
               />
             ))}

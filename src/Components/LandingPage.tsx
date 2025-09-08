@@ -9,7 +9,7 @@ import Assistant from "../assets/Assistant.png";
 
 const LandingPage = () => {
   return (
-    <div className="bg-gradient-to-tr from-[#E7E9F2] via-[#FEFEFE] to-[#E7E9F2] px-10 md:px-24 pb-20">
+    <div className="bg-gradient-to-t from-[#E7E9F2] via-[#FEFEFE] to-[#E7E9F2] px-10 md:px-24 pb-20">
       <Navbar />
 
       {/* Heading */}

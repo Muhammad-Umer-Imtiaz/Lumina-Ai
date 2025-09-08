@@ -1,4 +1,6 @@
-
+import logo from "../assets/luminaAiLogo.png";
+import appleLogo from "../assets/AppleIcon.png";
+import playstoreLogo from "../assets/playstoreLogo.png";
 const data = [
   {
     id: 1,
@@ -24,7 +26,37 @@ const data = [
 ];
 const SecondSection = () => {
   return (
-    <div className="px-24 py-20 bg-[#D9D9D9]/40 ">
+    <div className="px-24 py-20 bg-[#D9D9D9]/40 relative">
+      {/* Card of Apple and play store link */}
+      <div className="w-4/12 -top-32 right-8 py-8  px-10 bg-white rounded-3xl absolute">
+        <div className="flex gap-10">
+          <h2 className="text-[#0D0D0E] text-4xl">Download our mobile app</h2>
+          <img
+            src={logo}
+            className="bg-[#0D0D0E] rounded-2xl object-cover px-6 py-1"
+            alt=""
+          />
+        </div>
+
+        <div className="flex gap-4 justify-center mt-6">
+          <div className="flex items-center text-[#0D0D0E] border-[#010202]/40 gap-2 border-3 px-8 py-3 rounded-full">
+            <img src={playstoreLogo} className="bg-[#0D0D0E] w-8 h-8" alt="" />
+            <div className="">
+              <p className="text-sm line">GET IT ON</p>
+              <h2 className="text-base font-semibold">Google Play</h2>
+            </div>
+          </div>
+          <div className="flex items-center text-[#0D0D0E] border-[#010202]/40 border-3 px-8 gap-2 py-3 rounded-full">
+            <img src={appleLogo} className=" w-8 h-8" alt="" />
+            <div className="">
+              <p className="text-sm line">GET IT ON</p>
+              <h2 className="text-base font-semibold">Apple store</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* main Section */}
       <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-[#10174F]  to-[#777796] text-6xl">
         Proven Results For{" "}
         <span className="block bg-clip-text text-transparent bg-gradient-to-l from-[#10174F] to-[#777796]">
@@ -72,7 +104,6 @@ const SecondSection = () => {
       </div>
 
       {/* Add more sections or content as needed */}
-      
     </div>
   );
 };

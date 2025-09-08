@@ -1,4 +1,3 @@
-
 const Timeline = () => {
   const steps = [
     {
@@ -77,12 +76,17 @@ const Timeline = () => {
                     </div>
                   </div>
 
-                  {/* Center dot */}
-                  <div className="w-2/12 flex justify-center pl-10 items-center">
-                    <div className="bg-[#1D2977] w-10 h-10 rounded-full"></div>
-                    <div className={`bg-gradient-to-r from-[#938ED6] to-[#FFFFFF] w-10 h-1 ${
-                    index % 2 === 0 ? "flex-row-reverse" : "flex-row"
-                  }`}></div>
+                  {/* Center dot with alternating lines */}
+                  <div className="w-2/12 flex justify-center items-center relative">
+                    <div className="bg-[#1D2977] w-10 h-10 rounded-full z-10"></div>
+                    {/* Line going left (for even index - 0, 2, 4...) */}
+                    {index % 2 === 0 && (
+                      <div className="absolute right-1/2 w-10 h-1 bg-gradient-to-r from-[#938ED6] to-[#D9D9D9]  translate-x-15"></div>
+                    )}
+                    {/* Line going right (for odd index - 1, 3, 5...) */}
+                    {index % 2 === 1 && (
+                      <div className="absolute left-1/2 w-10 h-1 bg-gradient-to-l from-[#938ED6] to-[#D9D9D9] -translate-x-15"></div>
+                    )}
                   </div>
 
                   {/* Empty side */}

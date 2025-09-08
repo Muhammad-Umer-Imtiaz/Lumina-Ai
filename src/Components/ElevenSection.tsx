@@ -63,7 +63,7 @@ const ElevenSection = () => {
         <div className="">
           <motion.div
             className="flex gap-8"
-            animate={{ x: `-${wrappedIndex * 53}%` }}
+            animate={{ x: `-${wrappedIndex * 10}%` }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
           >
             {data.map((item) => (
